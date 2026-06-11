@@ -17,7 +17,7 @@ function FloatingCTA() {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
-    <div className="fixed bottom-3 right-24 z-50 flex items-center gap-4">
+    <div className="fixed bottom-3 right-[84px] z-50 flex items-center gap-4">
       <AnimatePresence>
         {showTooltip && (
           <motion.div
