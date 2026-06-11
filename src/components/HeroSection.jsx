@@ -145,19 +145,7 @@ export default function HeroSection() {
           We help visionary teams transform complex requirements into intuitive, scalable, and premium digital platforms.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex gap-4"
-        >
-          <button
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-6 py-3 rounded-full bg-white/10 hover:bg-white text-white/50 hover:text-black border border-white/10 hover:border-white/40 font-semibold text-sm hover:scale-105 transition-all duration-300 cursor-pointer"
-          >
-            Start Project
-          </button>
-        </motion.div>
+
       </motion.div>
 
       {/* Scroll indicator at bottom center */}
