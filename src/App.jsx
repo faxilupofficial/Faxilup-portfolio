@@ -17,7 +17,7 @@ function FloatingCTA() {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
-    <div className="fixed bottom-8 right-8 z-50 flex items-center gap-4">
+    <div className="fixed bottom-3 right-8 z-50 flex items-center gap-4">
       <AnimatePresence>
         {showTooltip && (
           <motion.div
@@ -34,9 +34,9 @@ function FloatingCTA() {
         onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
-        className="w-14 h-14 bg-accent hover:bg-white hover:text-black text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(139,92,246,0.5)] transition-all duration-300 hover:scale-110 group"
+        className="w-18 h-18 bg-accent hover:bg-white hover:text-black text-white rounded-full flex items-center justify-center shadow-[0_0_25px_rgba(139,92,246,0.5)] transition-all duration-300 hover:scale-110 group cursor-pointer"
       >
-        <MessageSquare className="w-6 h-6 group-hover:scale-110 transition-transform" />
+        <MessageSquare className="w-8 h-8 group-hover:scale-110 transition-transform" />
       </button>
     </div>
   );
