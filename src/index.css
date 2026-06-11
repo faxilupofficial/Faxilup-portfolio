@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0a0a0a;
+  --color-accent: #8b5cf6; /* neon purple */
+  --color-accent-light: #c4b5fd;
+  --color-accent-blue: #3b82f6; /* neon blue */
+
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --border-radius-xl: 16px;
+}
+
+@layer base {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #f3f4f6;
+    color-scheme: dark;
+    position: relative;
+  }
+
+  body {
+    @apply relative bg-[var(--background)] text-[var(--foreground)] font-sans antialiased overflow-x-hidden selection:bg-accent/30 selection:text-white;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/[0.03] backdrop-blur-md border border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent-blue;
+  }
+}
+
+/* Lenis smooth scrolling recommendations */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
